@@ -1,4 +1,4 @@
-#include <iostream>
+/*#include <iostream>
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -39,28 +39,12 @@ int main()
     sort_mas(mas, N);
     out_mas(mas, N);
 
-    //cout << binary_search(mas, 0, N-1, num);
     return 0;
-}
-/*#include <iostream>
+}*/
 
+#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
-
-void merge(int leftArray[], int rightArray[], int array[], int leftSize, int rightSize);
-void mergeSort(int array[], int size);
-bool comparator(int a, int b);
-
-int main() {
-    int array[] = {8, 2, 5, 3, 4, 7, 6, 1};
-    int size = sizeof(array) / sizeof(array[0]);
-
-    mergeSort(array, size);
-
-    for (int i = 0; i < size; i++) {
-        cout << array[i] << " ";
-    }
-    return 0;
-}
 
 bool comparator(int a, int b) {
     // Порівняння за зменшенням
@@ -116,4 +100,14 @@ void merge(int leftArray[], int rightArray[], int array[], int leftSize, int rig
         i++;
     }
 }
-*/
+
+int mas[100000];
+int main() {
+    int N;
+    cin >> N;
+    int mas[N]; 
+    in_mas(mas, N);
+    mergeSort(array, N);
+    out_mas(mas, N);
+    return 0;
+}

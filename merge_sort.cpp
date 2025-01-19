@@ -28,6 +28,8 @@ void bubble_sort_mas(int mas[], int N)
     }
 }
 
+
+
 int main()
 {
     int N, num=5;
@@ -40,3 +42,78 @@ int main()
     //cout << binary_search(mas, 0, N-1, num);
     return 0;
 }
+/*#include <iostream>
+
+using namespace std;
+
+void merge(int leftArray[], int rightArray[], int array[], int leftSize, int rightSize);
+void mergeSort(int array[], int size);
+bool comparator(int a, int b);
+
+int main() {
+    int array[] = {8, 2, 5, 3, 4, 7, 6, 1};
+    int size = sizeof(array) / sizeof(array[0]);
+
+    mergeSort(array, size);
+
+    for (int i = 0; i < size; i++) {
+        cout << array[i] << " ";
+    }
+    return 0;
+}
+
+bool comparator(int a, int b) {
+    // Порівняння за зменшенням
+    return a > b;
+}
+
+void mergeSort(int array[], int size) {
+    if (size <= 1) return; // базовий випадок
+
+    int middle = size / 2;
+    int leftArray[middle];
+    int rightArray[size - middle];
+
+    // Заповнення лівого та правого масивів
+    for (int i = 0; i < middle; i++) {
+        leftArray[i] = array[i];
+    }
+    for (int i = middle; i < size; i++) {
+        rightArray[i - middle] = array[i];
+    }
+
+    mergeSort(leftArray, middle);
+    mergeSort(rightArray, size - middle);
+    merge(leftArray, rightArray, array, middle, size - middle);
+}
+
+void merge(int leftArray[], int rightArray[], int array[], int leftSize, int rightSize) {
+    int i = 0, l = 0, r = 0; // індекси для заповнення масиву
+
+    // Злиття масивів за компаратором
+    while (l < leftSize && r < rightSize) {
+        if (comparator(leftArray[l], rightArray[r])) {
+            array[i] = leftArray[l];
+            l++;
+        } else {
+            array[i] = rightArray[r];
+            r++;
+        }
+        i++;
+    }
+
+    // Додавання залишків з лівого масиву
+    while (l < leftSize) {
+        array[i] = leftArray[l];
+        l++;
+        i++;
+    }
+
+    // Додавання залишків з правого масиву
+    while (r < rightSize) {
+        array[i] = rightArray[r];
+        r++;
+        i++;
+    }
+}
+*/
